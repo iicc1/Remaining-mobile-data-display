@@ -8,7 +8,7 @@
 
 const char* ssid = "xxx";
 const char* password = "xxx";
-String httpServer = "http://192.168.31.239:7500/";
+String httpServer = "http://xxx:7500/";
 
 LiquidCrystal_I2C lcd(0x27,16,2); // set the LCD address to 0x27 for a 16 chars and 2 line display
 
@@ -48,9 +48,10 @@ void loop() {
   HTTPClient http;
   String serverPath = httpServer + "stats";
   http.begin(serverPath.c_str());
-  http.setTimeout(60000);
+  http.setTimeout(120000);
   int httpResponseCode = http.GET();
   if (httpResponseCode != 200) {
+    // Arduino HTTP codes: https://github.com/esp8266/Arduino/blob/master/libraries/ESP8266HTTPClient/src/ESP8266HTTPClient.h
     Serial.println("Error HTTP, código: " + String(httpResponseCode));
     lcd.clear();
     lcd.setCursor(0,0);
