@@ -2,8 +2,9 @@ require('dotenv').config()
 const puppeteer = require('puppeteer')
 
 const usageStats = async () => {
-  // Browser configuration
-  const browser = await puppeteer.launch({ ignoreHTTPSErrors: true, headless: true, args: ['--no-sandbox', '--lang es'] })
+  // Browser configuration:
+  // I use a custom Chromium since I use a Raspberry. For the rest of the cases, use the auto downloaded Chromuim (remove the executablePath field)
+  const browser = await puppeteer.launch({ executablePath: '/usr/bin/chromium-browser', ignoreHTTPSErrors: true, headless: true, args: ['--no-sandbox', '--lang es'] })
   const page = await browser.newPage()
   await page.setViewport({ width: 1280, height: 720 })
 
