@@ -33,6 +33,7 @@ void loop() {
   while(WiFi.status() != WL_CONNECTED) {
     delay(500);
     delayLoops ++;
+    // If it takes to long to establish a connection, exit
     if (delayLoops > 100) {
       Serial.println("Error Wi-Fi: " + WiFi.status());
       lcd.clear();
@@ -48,7 +49,8 @@ void loop() {
   HTTPClient http;
   String serverPath = httpServer + "stats";
   http.begin(serverPath.c_str());
-  http.setTimeout(120000);
+  // The HTTP request may take a loong time
+  http.setTimeout(200000);
   int httpResponseCode = http.GET();
   if (httpResponseCode != 200) {
     // Arduino HTTP codes: https://github.com/esp8266/Arduino/blob/master/libraries/ESP8266HTTPClient/src/ESP8266HTTPClient.h
@@ -80,7 +82,7 @@ void loop() {
 
   lcd.clear();
   lcd.setCursor(0,0);
-  lcd.print("Datos: " + String(spentData) + "/" + String(limitData) + "GB");
+  lcd.print("Gastado: " + String(spentData) + "/" + String(limitData) + "GB");
   lcd.setCursor(0,1);
   lcd.print("Reinicio en: " + String(daysUntilNextCycle) + "d");
   http.end();
