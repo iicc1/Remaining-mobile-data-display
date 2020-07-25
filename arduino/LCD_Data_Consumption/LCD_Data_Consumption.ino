@@ -50,7 +50,8 @@ void loop() {
   String serverPath = httpServer + "stats";
   http.begin(serverPath.c_str());
   // The HTTP request may take a loong time
-  http.setTimeout(200000);
+  http.setTimeout(65535); // this is the uint16_t max value!
+  Serial.println("HTTP request sent, awaiting response...");
   int httpResponseCode = http.GET();
   if (httpResponseCode != 200) {
     // Arduino HTTP codes: https://github.com/esp8266/Arduino/blob/master/libraries/ESP8266HTTPClient/src/ESP8266HTTPClient.h
