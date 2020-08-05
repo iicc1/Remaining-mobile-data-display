@@ -49,6 +49,30 @@ const usageStats = async () => {
     limitData += dataBundle.limit
     spentData += dataBundle.spent
   }
+  for (const dataBundle of consumptionData.dataMgmBundles) {
+    limitData += dataBundle.limit
+    spentData += dataBundle.spent
+  }
+  for (const dataBundle of consumptionData.dataBundlesRollover) {
+    limitData += dataBundle.limit
+    spentData += dataBundle.spent
+  }
+  for (const dataBundle of consumptionData.dataBundlesNight) {
+    limitData += dataBundle.limit
+    spentData += dataBundle.spent
+  }
+  for (const dataBundle of consumptionData.dataBundlesWeekend) {
+    limitData += dataBundle.limit
+    spentData += dataBundle.spent
+  }
+  for (const dataBundle of consumptionData.dataBundlesExtra) {
+    limitData += dataBundle.limit
+    spentData += dataBundle.spent
+  }
+  for (const dataBundle of consumptionData.dataBundlesExtraSpecial) {
+    limitData += dataBundle.limit
+    spentData += dataBundle.spent
+  }
   const percentage = (spentData / limitData) * 100
   const percentageFormatted = Math.round(percentage)
   const limitDataFormatted = Math.round((limitData / 1000000000))

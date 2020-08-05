@@ -1,0 +1,334 @@
+{
+  "startDate": "2020-08-01T00:00:00.000+02:00",
+  "endDate": "2020-08-31T23:59:59.999+02:00",
+  "mainProductId": "TARIFA_BASE_CONTRATO",
+  "hasDropSubsOrderPending": false,
+  "billCycleType": 1,
+  "payType": "POSTPAID",
+  "hasBundles": true,
+  "actualMonth": 8,
+  "chargeTotal": 0.0,
+  "chargeTotalBundles": 1.0,
+  "balance": null,
+  "subState": "ACTIVE",
+  "totalMyTariff": 1.0,
+  "totalExtraBundles": 0.0,
+  "totalAdditional": 0.0,
+  "voice": {
+    "chargeTotal": 0,
+    "chargeLabel": "0 \u20AC",
+    "count": 0,
+    "countLabel": "0h 00m 00s"
+  },
+  "data": {
+    "chargeTotal": 0,
+    "chargeLabel": "0 \u20AC",
+    "count": 0,
+    "countLabel": "0"
+  },
+  "sms": {
+    "chargeTotal": 0,
+    "chargeLabel": "0 \u20AC",
+    "count": 0,
+    "countLabel": null
+  },
+  "mms": {
+    "chargeTotal": 0,
+    "chargeLabel": "0 \u20AC",
+    "count": 0,
+    "countLabel": null
+  },
+  "voicePremium": {
+    "chargeTotal": 0,
+    "chargeLabel": "0 \u20AC",
+    "count": 0,
+    "countLabel": "0h 00m 00s"
+  },
+  "voiceOutgoingRoaming": {
+    "chargeTotal": 0,
+    "chargeLabel": "0 \u20AC",
+    "count": 0,
+    "countLabel": "0h 00m 00s"
+  },
+  "voiceIngoingRoaming": {
+    "chargeTotal": 0,
+    "chargeLabel": "0 \u20AC",
+    "count": 0,
+    "countLabel": "0h 00m 00s"
+  },
+  "smsRoaming": {
+    "chargeTotal": 0,
+    "chargeLabel": "0 \u20AC",
+    "count": 0,
+    "countLabel": null
+  },
+  "smsPremium": {
+    "chargeTotal": 0,
+    "chargeLabel": "0 \u20AC",
+    "count": 0,
+    "countLabel": null
+  },
+  "mmsRoaming": {
+    "chargeTotal": 0,
+    "chargeLabel": "0 \u20AC",
+    "count": 0,
+    "countLabel": null
+  },
+  "dataRoaming": {
+    "chargeTotal": 0,
+    "chargeLabel": "0 \u20AC",
+    "count": 0,
+    "countLabel": null
+  },
+  "dataBundles": [
+    {
+      "label": "100MB ",
+      "type": "DATA",
+      "productId": "DATA_BUNDLE_100_POSTPAID",
+      "limit": 104857600,
+      "spent": 0,
+      "currentBalance": 110100480,
+      "limitFormatted": {
+        "header": null,
+        "size": 100.0,
+        "dataSize": "100",
+        "unit": "MB"
+      },
+      "spentFormatted": {
+        "header": null,
+        "size": 0.0,
+        "dataSize": "0",
+        "unit": "MB"
+      },
+      "currentBalanceFormatted": {
+        "header": null,
+        "size": 105.0,
+        "dataSize": "105",
+        "unit": "MB"
+      },
+      "percentage": 0.0,
+      "footerText": [
+        null
+      ],
+      "workaroundMsg": null,
+      "gloomyBundle": false,
+      "expired": false,
+      "price": 1.0,
+      "packName": null,
+      "rolloverBundles": null,
+      "bundles": [],
+      "noLimit": false
+    },
+    {
+      "label": "",
+      "type": "DATA",
+      "productId": "",
+      "limit": -5242880,
+      "spent": 0,
+      "currentBalance": 31312977216,
+      "limitFormatted": {
+        "header": null,
+        "size": -5.0,
+        "dataSize": "-5",
+        "unit": "MB"
+      },
+      "spentFormatted": {
+        "header": null,
+        "size": 0.0,
+        "dataSize": "0",
+        "unit": "MB"
+      },
+      "currentBalanceFormatted": {
+        "header": null,
+        "size": 29862.38,
+        "dataSize": "29862,38",
+        "unit": "MB"
+      },
+      "percentage": 0.0,
+      "footerText": [
+        null
+      ],
+      "workaroundMsg": null,
+      "gloomyBundle": false,
+      "expired": false,
+      "price": 0.0,
+      "packName": null,
+      "rolloverBundles": null,
+      "bundles": [],
+      "noLimit": false
+    }
+  ],
+  "dataMgmBundles": [],
+  "dataBundlesRollover": null,
+  "dataBundlesNight": null,
+  "dataBundlesWeekend": null,
+  "dataBundlesExtra": [],
+  "dataBundlesExtraSpecial": [
+    {
+      "label": "30GB GRATIS",
+      "type": "DATA_EXTRA",
+      "productId": "DATA_EXTRA_SPECIAL_BUNDLE_PROMO_POSTPAID",
+      "limit": 32212254720,
+      "spent": 10750664069,
+      "currentBalance": 21466833531,
+      "limitFormatted": {
+        "header": null,
+        "size": 30.0,
+        "dataSize": "30",
+        "unit": "GB"
+      },
+      "spentFormatted": {
+        "header": null,
+        "size": 10.01,
+        "dataSize": "10,01",
+        "unit": "GB"
+      },
+      "currentBalanceFormatted": {
+        "header": null,
+        "size": 19.99,
+        "dataSize": "19,99",
+        "unit": "GB"
+      },
+      "percentage": 33.4,
+      "footerText": [
+        "V\u00E1lido hasta el 21\/08 incluido"
+      ],
+      "workaroundMsg": null,
+      "gloomyBundle": false,
+      "expired": false,
+      "price": 0.0,
+      "packName": null,
+      "rolloverBundles": null,
+      "bundles": [],
+      "noLimit": false
+    }
+  ],
+  "dataBundlesExtraRoaming": null,
+  "chatBundles": [],
+  "rrssBundles": [],
+  "voiceBundles": null,
+  "voiceBundlesNight": null,
+  "voiceBundlesWeekend": null,
+  "voiceBundlesSimyo": null,
+  "voiceBundlesExtra": null,
+  "voiceBundlesExtraRoaming": null,
+  "bundlePacks": null,
+  "expiredBundles": [
+    {
+      "label": "100MB ",
+      "type": "DATA",
+      "productId": "DATA_BUNDLE_100_POSTPAID",
+      "limit": 110100480,
+      "spent": 0,
+      "currentBalance": 110100328,
+      "limitFormatted": {
+        "header": null,
+        "size": 105.0,
+        "dataSize": "105",
+        "unit": "MB"
+      },
+      "spentFormatted": {
+        "header": null,
+        "size": 0.0,
+        "dataSize": "0",
+        "unit": "MB"
+      },
+      "currentBalanceFormatted": {
+        "header": null,
+        "size": 105.0,
+        "dataSize": "105",
+        "unit": "MB"
+      },
+      "percentage": 0.0,
+      "footerText": [
+        "Caduc\u00F3 el 31\/07"
+      ],
+      "workaroundMsg": null,
+      "gloomyBundle": true,
+      "expired": true,
+      "price": 0.0,
+      "packName": null,
+      "rolloverBundles": null,
+      "bundles": [],
+      "noLimit": false
+    }
+  ],
+  "spentBundles": [
+    {
+      "label": "",
+      "type": "DATA",
+      "productId": "",
+      "limit": 0,
+      "spent": 0,
+      "currentBalance": 31312977216,
+      "limitFormatted": {
+        "header": null,
+        "size": 0.0,
+        "dataSize": "0",
+        "unit": "MB"
+      },
+      "spentFormatted": {
+        "header": null,
+        "size": 0.0,
+        "dataSize": "0",
+        "unit": "MB"
+      },
+      "currentBalanceFormatted": {
+        "header": null,
+        "size": 29862.38,
+        "dataSize": "29862,38",
+        "unit": "MB"
+      },
+      "percentage": 0.0,
+      "footerText": [
+        null
+      ],
+      "workaroundMsg": null,
+      "gloomyBundle": false,
+      "expired": false,
+      "price": 0.0,
+      "packName": null,
+      "rolloverBundles": null,
+      "bundles": [],
+      "noLimit": false
+    },
+    {
+      "label": "",
+      "type": "DATA",
+      "productId": "",
+      "limit": -5242880,
+      "spent": 0,
+      "currentBalance": 31312977216,
+      "limitFormatted": {
+        "header": null,
+        "size": -5.0,
+        "dataSize": "-5",
+        "unit": "MB"
+      },
+      "spentFormatted": {
+        "header": null,
+        "size": 0.0,
+        "dataSize": "0",
+        "unit": "MB"
+      },
+      "currentBalanceFormatted": {
+        "header": null,
+        "size": 29862.38,
+        "dataSize": "29862,38",
+        "unit": "MB"
+      },
+      "percentage": 0.0,
+      "footerText": [
+        null
+      ],
+      "workaroundMsg": null,
+      "gloomyBundle": false,
+      "expired": false,
+      "price": 0.0,
+      "packName": null,
+      "rolloverBundles": null,
+      "bundles": [],
+      "noLimit": false
+    }
+  ]
+};
