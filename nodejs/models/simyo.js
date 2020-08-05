@@ -45,38 +45,66 @@ const usageStats = async () => {
   const billCycleDay = consumptionData.billCycleType
   let limitData = 0
   let spentData = 0
-  for (const dataBundle of consumptionData.dataBundles) {
-    limitData += dataBundle.limit
-    spentData += dataBundle.spent
+  if (isIterable(consumptionData.dataBundles)) {
+    for (const dataBundle of consumptionData.dataBundles) {
+      if (dataBundle.limitFormatted.unit === 'GB' || dataBundle.spentFormatted.unit === 'GB') {
+        limitData += dataBundle.limitFormatted.size
+        spentData += dataBundle.spentFormatted.size
+      }
+    }
   }
-  for (const dataBundle of consumptionData.dataMgmBundles) {
-    limitData += dataBundle.limit
-    spentData += dataBundle.spent
+  if (isIterable(consumptionData.dataMgmBundles)) {
+    for (const dataBundle of consumptionData.dataMgmBundles) {
+      if (dataBundle.limitFormatted.unit === 'GB' || dataBundle.spentFormatted.unit === 'GB') {
+        limitData += dataBundle.limitFormatted.size
+        spentData += dataBundle.spentFormatted.size
+      }
+    }
   }
-  for (const dataBundle of consumptionData.dataBundlesRollover) {
-    limitData += dataBundle.limit
-    spentData += dataBundle.spent
+  if (isIterable(consumptionData.dataBundlesRollover)) {
+    for (const dataBundle of consumptionData.dataBundlesRollover) {
+      if (dataBundle.limitFormatted.unit === 'GB' || dataBundle.spentFormatted.unit === 'GB') {
+        limitData += dataBundle.limitFormatted.size
+        spentData += dataBundle.spentFormatted.size
+      }
+    }
   }
-  for (const dataBundle of consumptionData.dataBundlesNight) {
-    limitData += dataBundle.limit
-    spentData += dataBundle.spent
+  if (isIterable(consumptionData.dataBundlesNight)) {
+    for (const dataBundle of consumptionData.dataBundlesNight) {
+      if (dataBundle.limitFormatted.unit === 'GB' || dataBundle.spentFormatted.unit === 'GB') {
+        limitData += dataBundle.limitFormatted.size
+        spentData += dataBundle.spentFormatted.size
+      }
+    }
   }
-  for (const dataBundle of consumptionData.dataBundlesWeekend) {
-    limitData += dataBundle.limit
-    spentData += dataBundle.spent
+  if (isIterable(consumptionData.dataBundlesWeekend)) {
+    for (const dataBundle of consumptionData.dataBundlesWeekend) {
+      if (dataBundle.limitFormatted.unit === 'GB' || dataBundle.spentFormatted.unit === 'GB') {
+        limitData += dataBundle.limitFormatted.size
+        spentData += dataBundle.spentFormatted.size
+      }
+    }
   }
-  for (const dataBundle of consumptionData.dataBundlesExtra) {
-    limitData += dataBundle.limit
-    spentData += dataBundle.spent
+  if (isIterable(consumptionData.dataBundlesExtra)) {
+    for (const dataBundle of consumptionData.dataBundlesExtra) {
+      if (dataBundle.limitFormatted.unit === 'GB' || dataBundle.spentFormatted.unit === 'GB') {
+        limitData += dataBundle.limitFormatted.size
+        spentData += dataBundle.spentFormatted.size
+      }
+    }
   }
-  for (const dataBundle of consumptionData.dataBundlesExtraSpecial) {
-    limitData += dataBundle.limit
-    spentData += dataBundle.spent
+  if (isIterable(consumptionData.dataBundlesExtraSpecial)) {
+    for (const dataBundle of consumptionData.dataBundlesExtraSpecial) {
+      if (dataBundle.limitFormatted.unit === 'GB' || dataBundle.spentFormatted.unit === 'GB') {
+        limitData += dataBundle.limitFormatted.size
+        spentData += dataBundle.spentFormatted.size
+      }
+    }
   }
   const percentage = (spentData / limitData) * 100
   const percentageFormatted = Math.round(percentage)
-  const limitDataFormatted = Math.round((limitData / 1000000000))
-  const spentDataFormatted = Math.round((spentData / 1000000000))
+  const limitDataFormatted = Math.round(limitData) // Old approxmiation: Math.round((limitData / 1000000000))
+  const spentDataFormatted = Math.round(spentData) // Old approxmiation: Math.round((spentData / 1000000000))
 
   const dayOfTheMonth = new Date().getDate()
   let daysUntilNextCycle
@@ -99,6 +127,15 @@ const usageStats = async () => {
     limitDataFormatted: limitDataFormatted,
     spentDataFormatted: spentDataFormatted
   }
+}
+
+// https://stackoverflow.com/questions/18884249/checking-whether-something-is-iterable
+const isIterable = (obj) => {
+  // checks for null and undefined
+  if (obj == null) {
+    return false
+  }
+  return typeof obj[Symbol.iterator] === 'function'
 }
 
 // Testing from the command line. Usage: node simyo.js test
